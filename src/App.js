@@ -13,10 +13,12 @@ export class App extends Component {
     }
     
     //maps through peopleInSpace and renders the names
+    //Renders h1 elemnts displaying the names 
     render() {
         return (
             <div>
-                {this.state.peopleInSpace.map(person => person.name)}
+                {this.state.peopleInSpace.map((person, id) => 
+                    <h1 key={id}>{ person.name }</h1>)}
             </div>
         )
     }
